@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}index{% endblock title %}
+
+{% block body %}
+ <div class='container'>
+    <div class='row'>
+        {% for product in products %}
+            <div class='col'>
+                {{ product.title | title }}
+            </div>
+        {% endfor%}
+    </div>
+</div>
+{% endblock body %}
