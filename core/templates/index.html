@@ -7,7 +7,7 @@
     <div class='row'>
         {% for product in products %}
             <div class='col'>
-                {{ product.title | title }}
+                <a href="/product/{{ product.id }}">{{ product.title | title }}</a>
             </div>
         {% endfor%}
     </div>

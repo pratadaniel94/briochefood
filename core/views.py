@@ -5,6 +5,13 @@ from core.models import Product
 def index(request):
 
     context = {
-        "products": Product.objects.filter(activate=True)
+        "products": Product.objects.all()
     }
     return render(request, "index.html", context)
+
+def get_product(request, id):
+
+    context = {
+        "product": Product.objects.get(id=int(id))
+    }
+    return render(request, "product.html", context)
