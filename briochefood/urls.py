@@ -6,5 +6,6 @@ from core.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', index, name="index"),
-    url(r'^product/(?P<id>[0-9]+)/$', get_product, name='product')
+    url(r'^product/$', get_product, name='product'),
+    url(r'^order/$', get_order, name='order')
 ]

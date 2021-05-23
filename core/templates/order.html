@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Pedido{% endblock title %}
+
+{% block body %}
+ <div class='container'>
+    <div >
+        <h1>Meu Pedido</h1>
+    </div>
+   <div class='row'>
+    <table>
+      <tr>
+        <th>produto</th>
+        <th>qtd</th>
+        <th>preço</th>
+      </tr>
+      <tr>
+        <td>{{ seller.id_product }}</td>
+        <td>
+          <select maxlength="5">
+            {% for amount in range %}
+            <option value="qtd_product" maxlength="3">{{ amount }}</option>
+            {% endfor %}
+          </select>
+        </td>
+        <td>{{ seller.price }}</td>
+      </tr>
+    </table>
+   </div>
+   <div class='row'>
+     <button>Continuar</button>
+   </div>
+</div>
+{% endblock body %}

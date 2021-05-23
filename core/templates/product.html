@@ -8,6 +8,16 @@
         <h1>{{ product.title | title }}</h1>
         <p>{{ product.description }}</p>
     </div>
+    {% if sellers %}
+    {% for seller in sellers %}
+        <div class='row'>
+            <p> {{ seller.id_seller }}: <b>Valor: {{ seller.price }}</b></p>
+            <a href="/order?product_id={{ seller.id_product.id }}&seller_id={{ seller.id_seller.id }}"><button>Comprar</button></a>
+         </div>
+    {% endfor %}
+    {% else %}
+    <h1>Produto indisponivel</h1>
+    {% endif %}
 </div>
 
 {% endblock body %}

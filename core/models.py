@@ -17,8 +17,6 @@ class Seller(models.Model):
 class Product(models.Model):
     title = models.CharField(unique=True, max_length=50)
     description = models.TextField(max_length=1000)
-    # activate = models.BooleanField(default=True)
-    # provider = models.OneToOneField(Provider, )
 
     def __str__(self):
         return self.title
